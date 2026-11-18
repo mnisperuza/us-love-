@@ -1,0 +1,88 @@
+/* ============================================================================
+   AMOR — index.css  (portada)
+   ========================================================================== */
+
+.hero-title .title-lead {
+  font-size: .42em;
+  letter-spacing: .02em;
+  margin-bottom: .1em;
+}
+
+.hero-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.75rem 2.5rem;
+  margin-top: clamp(2.5rem, 7vh, 4.5rem);
+}
+
+.hero-meta {
+  margin: 0;
+  font-family: var(--ui);
+  font-size: .8rem;
+  letter-spacing: .06em;
+  color: var(--ink-3);
+  text-align: right;
+  line-height: 1.9;
+}
+.hero-meta .serif-it {
+  font-family: var(--display);
+  font-style: italic;
+  letter-spacing: .02em;
+  font-size: 1.05em;
+  color: var(--accent-deep);
+}
+.hero-meta .small { font-size: .74rem; letter-spacing: .08em; color: var(--ink-4); }
+
+/* La carta al pie */
+.letter {
+  position: relative;
+  max-width: 42rem;
+  margin: clamp(2rem, 6vh, 4rem) 0 0;
+  padding: clamp(1.75rem, 4vw, 2.75rem) clamp(1.5rem, 4vw, 3rem);
+  border: 0;
+  border-left: 1px solid var(--accent-quiet);
+  background: linear-gradient(100deg, var(--accent-wash), rgba(255,253,249,0) 62%);
+  border-radius: 0 var(--radius-l) var(--radius-l) 0;
+}
+.letter p {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.letter footer {
+  margin-top: 1.25rem;
+  font-family: var(--ui);
+  font-size: .72rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+/* La luz le pega más al título en esta página */
+.hero .hero-title { position: relative; }
+.hero::after {
+  content: "";
+  position: absolute;
+  left: -6vw;
+  top: 8%;
+  width: 46vw;
+  height: 46vw;
+  max-width: 620px;
+  max-height: 620px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(255, 250, 240, .85), rgba(255,250,240,0));
+  pointer-events: none;
+  z-index: -1;
+}
+
+@media (max-width: 700px) {
+  .hero-foot { align-items: flex-start; }
+  .hero-meta { text-align: left; }
+  .hero::after { width: 90vw; height: 90vw; top: 2%; }
+  .letter { border-radius: 0 var(--radius) var(--radius) 0; }
+}

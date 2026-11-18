@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+<title>La música ♥</title>
+<meta name="description" content="Nuestra banda sonora. Las canciones que me recuerdan a tí." />
+<meta name="theme-color" content="#f2eade" />
+<meta name="color-scheme" content="light" />
+<meta name="robots" content="noindex, nofollow" />
+
+<link rel="canonical" href="https://TU-USUARIO.github.io/TU-REPO/" />
+<meta property="og:url" content="https://TU-USUARIO.github.io/TU-REPO/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="La música ♥" />
+<meta property="og:description" content="Nuestra banda sonora." />
+<meta property="og:image" content="assets/img/og-cover.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="manifest" href="manifest.webmanifest" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="Para tí" />
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+<link rel="stylesheet" href="assets/css/base.css" />
+<link rel="stylesheet" href="assets/css/musica.css" />
+</head>
+
+<body data-page="musica" data-source="none">
+
+  <header class="nav">
+    <a class="nav-mark" href="index.html"><span class="mark-heart">♡</span> <span data-bind="site.shortTitle">para tí</span></a>
+    <nav class="nav-links" aria-label="Secciones">
+      <a href="index.html">casa</a>
+      <a href="musica.html">música</a>
+      <a href="fotos.html" data-soon="true" class="nav-hide-xs">fotos</a>
+      <a href="cartas.html" data-soon="true">cartas</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+
+    <section class="musica-head">
+      <p class="eyebrow">nuestra banda sonora</p>
+      <h1 class="musica-title">Una canción, <em>mil recuerdos</em></h1>
+      <p class="lede" id="trackCount">—</p>
+    </section>
+
+    <div class="player">
+
+      <!-- ── IZQUIERDA: lo que está sonando ─────────────────────────── -->
+      <section class="stage" aria-label="Reproduciendo ahora">
+
+        <div class="stage-frame" id="ytHost">
+          <!-- el iframe de YouTube se monta acá -->
+        </div>
+
+        <div class="stage-cover" id="cover" aria-hidden="true">
+          <div class="cover-ring"></div>
+          <div class="cover-grooves"></div>
+          <div class="cover-center"><span class="eq"><i></i><i></i><i></i><i></i></span></div>
+          <span class="cover-number" id="coverNumber">01</span>
+        </div>
+
+        <div class="now">
+          <h2 class="now-title" id="nowTitle">Elegí una canción</h2>
+          <p class="now-artist" id="nowArtist">—</p>
+          <p class="now-note" id="nowNote" hidden></p>
+          <p class="now-hint" id="emptyHint" hidden>
+            Todavía no le puse el enlace de esta canción.
+            <a class="link-under" id="ytSearch" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">Escuchala en YouTube ↗</a>
+          </p>
+        </div>
+
+        <div class="controls">
+          <button class="ctl" id="prevBtn" type="button" title="Anterior" aria-label="Canción anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5v14L9 12l10-7zM5 5h2.5v14H5z"/></svg>
+          </button>
+          <button class="ctl ctl-play" id="playBtn" type="button" title="Reproducir o pausar" aria-label="Reproducir">
+            <svg class="ico-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            <svg class="ico-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>
+          </button>
+          <button class="ctl" id="nextBtn" type="button" title="Siguiente" aria-label="Canción siguiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5v14l10-7L5 5zm11.5 0H19v14h-2.5z"/></svg>
+          </button>
+        </div>
+
+        <div class="seek-row" id="seekRow" hidden>
+          <span class="time" id="curTime">0:00</span>
+          <div class="seek" id="seek" role="slider" tabindex="0"
+               aria-label="Posición en la canción" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div class="seek-rail"></div>
+            <div class="seek-fill" id="seekFill"></div>
+            <div class="seek-dot" id="seekDot"></div>
+          </div>
+          <span class="time" id="durTime">0:00</span>
+        </div>
+
+        <div class="util-row" id="utilRow" hidden>
+          <label class="vol">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z"/></svg>
+            <input type="range" id="volume" min="0" max="1" step="0.01" aria-label="Volumen" />
+          </label>
+          <button class="chip" id="shuffleBtn" type="button" aria-pressed="false">aleatorio</button>
+          <button class="chip" id="repeatBtn" type="button" aria-pressed="false">repetir</button>
+          <a class="chip chip-link" id="openSource" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" hidden>abrir en youtube ↗</a>
+        </div>
+
+        <p class="stage-note">Pulsá <kbd>espacio</kbd> para pausar · <kbd>←</kbd><kbd>→</kbd> para cambiar de canción</p>
+      </section>
+
+      <!-- ── DERECHA: la lista ──────────────────────────────────────── -->
+      <section class="tracks" aria-label="Lista de canciones">
+        <div class="tracks-head">
+          <span class="eyebrow">la lista</span>
+          <button class="btn btn-ghost" id="shuffleAllBtn" type="button">sorprendeme ♡</button>
+        </div>
+        <ol class="track-list" id="trackList"></ol>
+      </section>
+
+    </div>
+
+    <div class="musica-foot" data-reveal="pie">
+      <p class="serif-it" id="footNote">Siempre vas a tener la última canción puesta.</p>
+      <p class="muted small">Las canciones suenan desde YouTube: tu las eliges, yo las colocó.</p>
+    </div>
+
+  </main>
+
+  <footer class="site-foot">
+    <span class="foot-time"><b data-counter="total">·</b> días juntos</span>
+    <a href="index.html">← volver a casa</a>
+    <a href="musica.html">♫</a>
+  </footer>
+
+  <audio id="audio" preload="metadata"></audio>
+
+  <script src="config.js"></script>
+  <script src="tracks.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/player.js"></script>
+</body>
+</html>

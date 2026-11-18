@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+<title>Para vos ♥</title>
+<meta name="description" content="Una casita en internet, hecha a mano, sólo para vos." />
+<meta name="theme-color" content="#f2eade" />
+<meta name="color-scheme" content="light" />
+<meta name="author" content="hecho con todo mi corazón" />
+
+<!-- Privacidad: que esto no aparezca en Google. No es una garantía,
+     pero es lo único que se puede hacer en un sitio estático. -->
+<meta name="robots" content="noindex, nofollow" />
+
+<!-- Para que se vea lindo cuando compartís el link por WhatsApp -->
+<link rel="canonical" href="https://TU-USUARIO.github.io/TU-REPO/" />
+<meta property="og:url" content="https://TU-USUARIO.github.io/TU-REPO/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Para vos ♥" />
+<meta property="og:description" content="Una casita en internet, hecha a mano, sólo para vos." />
+<meta property="og:image" content="assets/img/og-cover.jpg" />
+<meta property="og:locale" content="es_LA" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- Para "agregar a la pantalla de inicio" en el celular -->
+<link rel="manifest" href="manifest.webmanifest" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="Para vos" />
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+<link rel="stylesheet" href="assets/css/base.css" />
+<link rel="stylesheet" href="assets/css/index.css" />
+</head>
+
+<body data-page="index">
+
+  <header class="nav">
+    <a class="nav-mark" href="index.html"><span class="mark-heart">♡</span> <span data-bind="site.shortTitle">para vos</span></a>
+    <nav class="nav-links" aria-label="Secciones">
+      <a href="index.html">casa</a>
+      <a href="musica.html">música</a>
+      <a href="fotos.html" data-soon="true" class="nav-hide-xs">fotos</a>
+      <a href="cartas.html" data-soon="true">cartas</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <section class="hero">
+        <p class="eyebrow" data-bind="home.eyebrow">una cosita que hice</p>
+
+        <h1 class="hero-title">
+          <span class="title-lead" data-bind="her.greeting">Para mi</span>
+          <span id="heroWord">osita</span>
+        </h1>
+
+        <div class="phrase-slot" id="phrases" aria-live="polite"></div>
+
+        <div class="hero-foot">
+          <a class="btn btn-solid" href="musica.html">
+            <span aria-hidden="true">♫</span> ¡Dale Play Bebe!
+          </a>
+          <p class="hero-meta">
+            <span data-counter="sentence"></span><span class="serif-it">juntitos 🥺</span>
+            <br />
+            <span class="muted small" data-counter="monthly"></span>
+          </p>
+        </div>
+      </section>
+
+      <hr class="rule" />
+
+      <section aria-labelledby="casitaTitle">
+        <p class="eyebrow" data-reveal="la casita">esta casita</p>
+        <h2 class="section-title" id="casitaTitle" data-reveal="la casita">Un lugar donde están
+          <em>las cosas que te hago</em></h2>
+        <p class="lede" data-reveal="la casita" data-reveal-delay="80" data-bind="home.intro">
+          Acá encontrás las canciones que me recuerdan a vos.
+        </p>
+
+        <div class="modules" id="modules"></div>
+
+        <blockquote class="letter" data-reveal="la carta">
+          <p data-bind="home.letter">Si pudiera elegir de nuevo, volvería a encontrarte en cada vida.
+          Gracias por hacer que lo cotidiano se sienta como algo mágico.</p>
+          <footer>— <span data-bind="us.signedBy">el que te escribe esto</span></footer>
+        </blockquote>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <span class="foot-time"><b data-counter="total">·</b> días <span class="nav-hide-xs">y contando</span></span>
+    <span data-counter="yearly"></span>
+    <a href="index.html">♡</a>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="tracks.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

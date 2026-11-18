@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Se te perdió la página ♥</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+<style>
+  :root{
+    --paper-1:#f2eade; --ink:#2a211c; --ink-3:#7d6f64; --accent:#9a5f76; --line:rgba(42,33,28,.14);
+    --display:"Hoefler Text","Iowan Old Style",Palatino,Georgia,serif;
+    --ui:ui-sans-serif,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;min-height:100vh;display:grid;place-items:center;text-align:center;padding:2rem;
+    font-family:var(--display);color:var(--ink);
+    background:
+      radial-gradient(120% 80% at 50% -10%,rgba(255,252,246,.9),transparent 60%),
+      linear-gradient(178deg,#f8f3ec,#eae0d1);
+  }
+  .n{font-size:clamp(4rem,18vw,9rem);line-height:1;color:var(--accent);opacity:.35;margin:0}
+  h1{font-weight:400;font-size:clamp(1.5rem,4.5vw,2.4rem);margin:.2em 0 .6em}
+  em{color:var(--accent)}
+  p{font-family:var(--ui);font-size:.9rem;color:var(--ink-3);max-width:34rem;margin:0 auto 2rem;line-height:1.7}
+  a.go{
+    display:inline-block;font-family:var(--ui);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;
+    padding:.95em 1.9em;border-radius:999px;background:var(--ink);color:var(--paper-1);text-decoration:none;
+  }
+  a.go:hover{background:var(--accent)}
+</style>
+</head>
+<body>
+  <div>
+    <p class="n">404</p>
+    <h1>Esta <em>no era</em> la página</h1>
+    <p>Te pasaste de un enlace que todavía no existe o lo escribiste mal. Nada roto, en serio — volvé y elegí otra cosa.</p>
+    <a class="go" href="index.html">volver a casa</a>
+  </div>
+</body>
+</html>
