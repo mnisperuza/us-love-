@@ -4,14 +4,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Las fotos ♥</title>
-<meta name="description" content="El álbum. Todavía en construcción." />
+<meta name="description" content="Un ramito de flores mientras armamos el álbum." />
 <meta name="theme-color" content="#f2eade" />
 <meta name="robots" content="noindex, nofollow" />
 <link rel="manifest" href="manifest.webmanifest" />
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="assets/css/base.css" />
-<link rel="stylesheet" href="assets/css/soon.css" />
+<link rel="stylesheet" href="assets/css/fotos.css" />
 </head>
 <body data-page="fotos">
 
@@ -25,8 +25,25 @@
     </nav>
   </header>
 
-  <main class="wrap soon-page">
-    <div id="soonBody"></div>
+  <main class="wrap bouquet-page">
+    <div class="bouquet-header">
+      <p class="bouquet-eyebrow">en camino</p>
+      <h1 class="bouquet-title">Un ramito para ti</h1>
+      <p class="bouquet-sub">
+        Mientras termino de juntar nuestras fotos favoritas para ponerlas acá,
+        te dejo estas flores que florecen cada vez que entras.
+      </p>
+    </div>
+
+    <section class="bouquet-stage" aria-label="Animación de un ramo de flores ASCII">
+      <pre id="asciiBouquet" class="ascii-canvas" aria-hidden="true"></pre>
+    </section>
+
+    <div class="bouquet-actions">
+      <button id="replayBloom" class="btn-bloom" type="button">✿ Volver a florecer</button>
+    </div>
+
+    <p class="bouquet-note">Hecho a mano, pétalo por pétalo.</p>
   </main>
 
   <footer class="site-foot">
@@ -37,6 +54,6 @@
   <script src="config.js"></script>
   <script src="tracks.js"></script>
   <script src="assets/js/app.js"></script>
-  <script src="assets/js/soon.js"></script>
+  <script src="assets/js/fotos.js"></script>
 </body>
 </html>

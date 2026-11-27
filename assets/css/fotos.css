@@ -1,0 +1,115 @@
+/* =============================================================
+   FOTOS — Ramo de flores ASCII que florece
+   ============================================================= */
+
+.bouquet-page {
+  padding-top: clamp(20px, 4vw, 48px);
+  padding-bottom: clamp(48px, 8vw, 88px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.bouquet-header {
+  max-width: 540px;
+  margin-bottom: 24px;
+}
+
+.bouquet-eyebrow {
+  font-family: var(--mono, ui-monospace, monospace);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent, #b55464);
+  margin: 0 0 8px;
+}
+
+.bouquet-title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 500;
+  margin: 0 0 10px;
+  line-height: 1.15;
+}
+
+.bouquet-sub {
+  margin: 0;
+  opacity: 0.78;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.bouquet-stage {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  background: rgba(255, 252, 247, 0.68);
+  border: 1px solid rgba(60, 40, 30, 0.12);
+  border-radius: 20px;
+  padding: clamp(16px, 3vw, 28px) clamp(10px, 2vw, 20px);
+  box-shadow: 0 14px 40px rgba(45, 25, 20, 0.06);
+  overflow: hidden;
+}
+
+.ascii-canvas {
+  margin: 0;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: clamp(9px, 2.1vw, 14px);
+  line-height: 1.18;
+  letter-spacing: 0.06em;
+  white-space: pre;
+  user-select: none;
+  display: inline-block;
+  text-align: left;
+  min-height: 24em;
+}
+
+/* Colores del ramo */
+.c-stem   { color: #4f7754; }
+.c-leaf   { color: #679469; }
+.c-bud    { color: #c97b84; }
+.c-rose   { color: #c44d63; font-weight: 600; }
+.c-blush  { color: #de7a8c; }
+.c-gold   { color: #d49b38; font-weight: 600; }
+.c-lav    { color: #9c7ab8; }
+.c-ribbon { color: #b55464; font-weight: 600; }
+.c-spark  { color: #d6a456; opacity: 0.85; }
+.c-paper  { color: #8c7a6b; opacity: 0.75; }
+
+.bouquet-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-bloom {
+  appearance: none;
+  border: 1px solid rgba(181, 84, 100, 0.35);
+  background: rgba(181, 84, 100, 0.1);
+  color: inherit;
+  font: inherit;
+  font-size: 0.92rem;
+  padding: 10px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.btn-bloom:hover {
+  background: rgba(181, 84, 100, 0.18);
+  transform: translateY(-1px);
+}
+
+.btn-bloom:active {
+  transform: translateY(0);
+}
+
+.bouquet-note {
+  margin-top: 18px;
+  font-size: 0.9rem;
+  opacity: 0.72;
+  font-style: italic;
+}
