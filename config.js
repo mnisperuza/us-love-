@@ -74,7 +74,7 @@ window.AMOR_CONFIG = {
       title: "Las fotos",
       subtitle: "nosotros dos bebe",
       desc: "El álbum que todavía estoy armando, que te dije hace ratito bebe.",
-      ready: false
+      ready: true
     },
     {
       href: "cartas.html",
@@ -82,7 +82,7 @@ window.AMOR_CONFIG = {
       title: "Las cartas",
       subtitle: "lo que no te digo",
       desc: "Cosas que se me ocurren de madrugada, ya no necesitarás ese grupo de whatsapp.",
-      ready: false
+      ready: true
     }
   ],
 
